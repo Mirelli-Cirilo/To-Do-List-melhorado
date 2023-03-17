@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1>Atualizar</h1>
+
+<div>
+<form method ="POST" action="">
+    {{form.as_p}}
+
+    {% csrf_token %}
+    <input type="submit" value="Atualizar">
+
+    <a href="{% url 'tarefa' %}">Voltar</a>
+</form>
+</div>
+
+{% endblock content %}

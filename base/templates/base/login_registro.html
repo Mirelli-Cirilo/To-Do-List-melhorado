@@ -1,0 +1,62 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li>{{message}}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+{% if page == 'login' %}
+
+<div class="header-bar">
+    <h1>Login</h1>
+</div>
+
+<div class="card-body">
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        <label >Usuário:</label>
+        <input type="text" name="username" placeholder="Nome de usuário....">
+
+        <label>Senha:</label>
+        <input type="password" name="password" placeholder="Senha...">
+
+        <input class="button" type="submit" value="Entrar">
+    </form>
+
+    <p>Ainda não se registrou? <a href="{% url 'registrar' %}">Registrar</a></p>
+    
+</div>
+{% else %}
+
+<div class="header-bar">
+    <h1>Registro</h1>
+</div>
+
+<div class="card-body">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <label>{{form.username.label}}</label>
+        {{form.username}}
+
+        <label>{{form.password1.label}}</label>
+        {{form.password1}}
+
+        <label>{{form.password2.label}}</label>
+        {{form.password2}}
+        <input style="margin-top: 10px;" class="button" type="submit" value="Registrar">
+    </form>
+
+    <p>Já se registrou? <a href="{% url 'login' %}">Login</a></p>
+    
+</div>
+
+{% endif %}
+
+{% endblock content %}
