@@ -1,20 +1,30 @@
 # To-Do-List-melhorado
 App To-Do com CRUD, login, logout e registro, barra de pesquisa e autenticação de usuário
 
+TECNOLOGIAS: Python, Django, Html, Css.
+
 # PARA CLONAR O REPOSITÓRIO:
 
-use o comando - "git clone https://github.com/Mirelli-Cirilo/To-Do-List-melhorado.git"
+use o comando 
 
-depois entre na pasta do projeto - "cd todo_list"
+```git clone https://github.com/Mirelli-Cirilo/To-Do-List-melhorado.git```
+
+depois entre na pasta do projeto 
+
+```cd todo_list```
+
+instale os 'requirements' 
+
+```pip install -r requirements.txt```
 
 crie um ambiente virtual
 
-```shell primeiro instale o virtualenv - pip install virtualenv```
+```virtualenv nomedoenv```
 
--/ agora crie seu ambiente virtual - "virtualenv nomedoenv"
+ative seu ambiente virtual 
 
-ative seu ambiente virtual - "nomedoenv\scripts\activate"
+```nomedoenv\scripts\activate - windows```
 
-instale os 'requirements' - "pip install -r requirements.txt"
+pra rodar a app use 
 
-pra rodar a app use - "python manage.py runserver"
+```python manage.py runserver```
