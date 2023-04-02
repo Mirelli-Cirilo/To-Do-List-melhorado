@@ -9,7 +9,7 @@ depois entre na pasta do projeto - "cd todo_list"
 
 crie um ambiente virtual
 
--/ primeiro instale o virtualenv - "pip install virtualenv"
+```shell primeiro instale o virtualenv - pip install virtualenv```
 
 -/ agora crie seu ambiente virtual - "virtualenv nomedoenv"
 
