@@ -1,6 +1,6 @@
 from pathlib import Path
 import os
-import dj_database_url
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -61,9 +61,8 @@ WSGI_APPLICATION = 'todo_list.wsgi.application'
 
 
 
-DATABASES = {  
-    'default': dj_database_url.parse('postgres://productiondatabase_u33c_user:lVEPgmgVAf4WWWCWPBJ8Ae5nifzZIlzI@dpg-cig2e5lgkuvojjf2q2g0-a.ohio-postgres.render.com/productiondatabase_u33c')
-} 
+#DATABASES = {  
+ #   'default': dj_database_url.parse('postgres://productiondatabase_u33c_user:lVEPgmgVAf4WWWCWPBJ8Ae5nifzZIlzI@dpg-cig2e5lgkuvojjf2q2g0-a.ohio-postgres.render.com/productiondatabase_u33c')} 
 
 
 AUTH_PASSWORD_VALIDATORS = [
