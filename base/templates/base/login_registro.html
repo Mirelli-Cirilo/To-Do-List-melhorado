@@ -14,25 +14,10 @@
 {% if page == 'login' %}
 
 <div class="header-bar">
-    <h1>Login</h1>
+    <h1>hola</h1>
 </div>
 
-<div class="card-body">
-    <form method="POST" action="">
-        {% csrf_token %}
 
-        <label >Usuário:</label>
-        <input type="text" name="username" placeholder="Nome de usuário....">
-
-        <label>Senha:</label>
-        <input type="password" name="password" placeholder="Senha...">
-
-        <input class="button" type="submit" value="Entrar">
-    </form>
-
-    <p>Ainda não se registrou? <a href="{% url 'registrar' %}">Registrar</a></p>
-    
-</div>
 {% else %}
 
 <div class="header-bar">

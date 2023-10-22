@@ -10,26 +10,6 @@ from .forms import TarefaForm
 def loginPage(request):
     page = 'login'
 
-    if request.user.is_authenticated:
-        return redirect('/')
-    
-    if request.method == 'POST':
-        username = request.POST.get('username').lower()
-        password = request.POST.get('password')
-
-        try:
-            user = User.objects.get(username=username)
-        except:
-            messages.error(request, 'Usuário não foi encontrado.')
-        
-        user = authenticate(request, username=username, password=password)
-
-        if user:
-            login(request, user)
-            return redirect('/')
-        else:
-            messages.error(request, 'Nome de usuário ou senha podem estar incorretos! Tente novamente.')    
-
     context = {'page': page}
     return render(request, 'base/login_registro.html', context)
 
