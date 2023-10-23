@@ -1,36 +1,14 @@
 {% extends 'main.html' %}
 {% load static %}
+
+{% block title %} Tattoodubem {% endblock %}
+
+{% block meta %} <link rel="stylesheet" href="{% static 'css/slider.css' %}"> 
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<link rel="stylesheet" href="{% static 'css/contato.css' %}">
+{% endblock %}
+
 {% block content %}
-
-{% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li>{{message}}</li>
-    {% endfor %}
-</ul>
-{% endif %}
-
-
-{% if page == 'login' %}
-
-<div class="header-container">
-    <div class="header-info">
-        <div class="logo">
-          
-        </div>
-        <ul class="menu-links">
-          <li>
-              <a href="#inicio">Início</a>
-          </li>
-          <li>
-              <a href="#contato">Contato</a>
-          </li>    
-          <li>
-              <a href="#localizacao" >Localização</a>
-          </li>    
-        </ul>
-    </div>
-</div>
 
 <div class="container">
     <div id="inicio" class="slider">
@@ -42,16 +20,16 @@
         
 
             <div class="slide first">
-                <img src="{% static 'images/tattoo1.jpg' %}" alt="">
+                <img src="{% static 'images/tattoo6.jpg' %}" alt="">
             </div>
             <div class="slide">
-                <img src="{% static 'images/tattoo2.jpg' %}" alt="">
+                <img src="{% static 'images/tattoo6.jpg' %}" alt="">
             </div>
             <div class="slide">
-                <img src="{% static 'images/tattoo4.jpg' %}" alt="">
+                <img src="{% static 'images/tattoo6.jpg' %}" alt="">
             </div>
             <div class="slide">
-                <img src="{% static 'images/tattoo5.jpg' %}" alt="">
+                <img src="{% static 'images/tattoo6.jpg' %}" alt="">
             </div>
 
             <div class="navigation-auto">
@@ -85,17 +63,17 @@
           </div>
 
           <div class="list-prod mt-4">
-            <img width="640px" src="{% static 'images/tattoo7.jpg' %}" alt="">
+            <img width="640px" src="{% static 'images/tattoo6.jpg' %}" alt="">
             <p></p>
           </div>
 
           <div class="list-prod mt-4">
-            <img width="640px" src="{% static 'images/tatto3.jpg' %}" alt="">
+            <img width="640px" src="{% static 'images/tatto6.jpg' %}" alt="">
             <p></p>
           </div>
 
           <div class="list-prod mt-4">
-            <img width="600px" src="{% static 'images/tattoo5.jpg' %}" alt="">
+            <img width="600px" src="{% static 'images/tattoo6.jpg' %}" alt="">
             <p></p>
           </div>
           
@@ -181,40 +159,14 @@
             <div class="footer-info">
                 <p>CEP - 49810-000 - Sergipe - Poço Redondo
                 </p>
-                <p><img width="" src="{% static 'images/whats.png' %}" alt="">+55 79 999705541</p>
-                <a href="https://www.instagram.com/hiagotattoodubem_/"><img src="{% static 'images/instagram.png' %}" alt=""></a>
+                <p> +55 79 999705541</p>
+                <a href="https://www.instagram.com/hiagotattoodubem_/"></a>
 
             </div>
             <div class="maded"><p>feito por <a href="https://www.instagram.com/mirelli_cirilo/">CiriloDev</a></p></div>
             
       </footer>
 </div>
-
-
-{% else %}
-
-<div class="header-bar">
-    <h1>Registro</h1>
-</div>
-
-<div class="card-body">
-    <form method="POST" action="">
-        {% csrf_token %}
-        <label>{{form.username.label}}</label>
-        {{form.username}}
-
-        <label>{{form.password1.label}}</label>
-        {{form.password1}}
-
-        <label>{{form.password2.label}}</label>
-        {{form.password2}}
-        <input style="margin-top: 10px;" class="button" type="submit" value="Registrar">
-    </form>
-
-    <p>Já se registrou? <a href="{% url 'login' %}">Login</a></p>
     
-</div>
 
-{% endif %}
-
-{% endblock content %}
+{% endblock %}
